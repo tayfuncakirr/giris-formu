@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+    <link rel="stylesheet" href="style.css">
+  
+</head>
+
+<body>
+    <div>
+    <script>
+
+function login(){
+
+let txt=document.getElementById("txt").value;
+let pass=document.getElementById("pass").value;
+
+if(txt=="" || pass==""){
+    /* alert("bu alan boş geçilemez")
+    document.getElementById("result") */
+    
+    document.getElementById("result").innerHTML="Bu alan boş geçilemez..."
+   
+}
+else {
+if (txt=="admin")
+{
+if(pass=="12345"){
+
+    document.getElementById("result").innerHTML="giriş başarılı"
+}
+
+else{
+    document.getElementById("result").innerHTML=" parolanız yanlış..."
+}
+ 
+}
+else{
+    document.getElementById("result").innerHTML="kullanıcı adınız yanlış..."
+}
+}
+
+}
+
+    </script>
+    </div>
+    <div class="login-form">
+       
+        <form action="index.html">
+            <h1>Login</h1>
+            <input type="text" id="txt" placeholder="username" class="txt">
+            <input type="password" id="pass" placeholder="password" class="password">
+            <input type onclick="login()" id="girisbutton" value="Giriş" class="btn">
+        
+        </form>
+    
+       
+    </div>
+<p id="result" ></p>
+
+</body>
+</html>
