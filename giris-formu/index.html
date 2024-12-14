@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  
+</head>
+
+<body>
+    <div>
+    <script>
+
+function login(){
+
+let txt=document.getElementById("txt").value;
+let pass=document.getElementById("pass").value;
+
+if(txt=="" || pass==""){
+    /* alert("bu alan boş geçilemez")
+    document.getElementById("result") */
+    
+    document.getElementById("result").innerHTML="Bu alan boş geçilemez..."
+   
+}
+else {
+if (txt=="admin")
+{
+if(pass=="12345"){
+
+    document.getElementById("result").innerHTML="giriş başarılı"
+}
+
+else{
+    document.getElementById("result").innerHTML=" parolanız yanlış..."
+}
+ 
+}
+else{
+    document.getElementById("result").innerHTML="kullanıcı adınız yanlış..."
+}
+}
+
+
+
+
+
+
+
+
+
+
+}
+
+    </script>
+    </div>
+    <div class="login-form">
+       
+        <form action="index.html">
+            <h1>Login</h1>
+            <div class="input-box">
+                <input type="text" id="txt" placeholder="username" class="txt">
+            <i id="user" class='bx bxs-user'></i>
+            </div>
+            <div class="input-box">
+                <input type="password" id="pass" placeholder="password" class="password">
+            <i id="lock" class='bx bxs-lock-open-alt' ></i>
+            </div>
+            
+            <div class="remember-forgot">
+                <label >
+                    <input type="checkbox">Remember me
+                </label>
+                <a href="#">Forgot password?</a>
+            </div>
+            <input type onclick="login()" id="loginbutton" value="Login" class="btn">
+            <div class="register-link">
+                <p class="account">Don't have an account? <a href="#">Register</a> </p>
+            </div>
+        
+        </form>
+    
+       
+    </div>
+<p id="result" ></p>
+
+    
+
+
+
+</body>
+
+
+
+</html>
